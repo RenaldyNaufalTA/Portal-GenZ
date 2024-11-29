@@ -13,7 +13,7 @@ Route::get('/', function () {
     // dd($news);
 
     return Inertia::render('Home', [
-        'title' => 'ReactNews',
+        'title' => 'Portal GenZ',
         'description' => 'Sebuah Web portal berita tentang GenZ',
         'news' => $news
     ]);
