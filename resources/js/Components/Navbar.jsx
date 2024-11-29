@@ -59,37 +59,33 @@ const Navbar = ({ user }) => {
                     </form>
                 </div>
                 <div className="dropdown dropdown-end">
-                    <div
-                        tabIndex={0}
-                        role="button"
-                        className="btn btn-ghost btn-circle avatar"
-                    >
-                        <div className="w-10 rounded-full">
-                            <img
-                                alt="Tailwind CSS Navbar component"
-                                src="https://i.pravatar.cc/50?img=12"
-                            />
-                        </div>
-                    </div>
-                    <ul
-                        tabIndex={0}
-                        className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-                    >
-                        {!user ? (
-                            <>
-                                <li>
-                                    <Link href={route("login")} as="button">
-                                        Login
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={route("register")} as="button">
-                                        Register
-                                    </Link>
-                                </li>
-                            </>
-                        ) : (
-                            <>
+                    {!user ? (
+                        <Link
+                            href={route("login")}
+                            className="bg-transparent text-sky-500 px-2.5 py-1.5 border-2 border-sky-500 hover:bg-sky-500 hover:text-white rounded-md"
+                            as="button"
+                        >
+                            Login
+                        </Link>
+                    ) : (
+                        <>
+                            <div
+                                tabIndex={0}
+                                role="button"
+                                className="btn btn-ghost btn-circle avatar"
+                            >
+                                <div className="w-10 rounded-full">
+                                    <img
+                                        alt="Tailwind CSS Navbar component"
+                                        src="https://i.pravatar.cc/50?img=12"
+                                    />
+                                </div>
+                            </div>
+
+                            <ul
+                                tabIndex={0}
+                                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                            >
                                 <li>
                                     <Link href={route("dashboard")} as="button">
                                         Back to Dashboard
@@ -104,9 +100,9 @@ const Navbar = ({ user }) => {
                                         Logout
                                     </Link>
                                 </li>
-                            </>
-                        )}
-                    </ul>
+                            </ul>
+                        </>
+                    )}
                 </div>
             </div>
         </div>

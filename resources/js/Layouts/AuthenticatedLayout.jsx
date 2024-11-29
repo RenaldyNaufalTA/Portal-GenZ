@@ -10,14 +10,14 @@ export default function Authenticated({ user, header, children }) {
         useState(false);
 
     return (
-        <div className="min-h-screen bg-sky-100">
-            <nav className="bg-white border-b border-gray-100">
+        <div className="min-h-screen bg-base-300">
+            <nav className="bg-base-200 border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
                                 <Link href="/">
-                                    <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
+                                    <ApplicationLogo className="block h-9 w-auto fill-current text-white" />
                                 </Link>
                             </div>
 
@@ -32,7 +32,11 @@ export default function Authenticated({ user, header, children }) {
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink
                                     href={route("index-news")}
-                                    active={route().current("index-news")}
+                                    active={[
+                                        route().current("index-news"),
+                                        route().current("create-news"),
+                                        route().current("edit-news"),
+                                    ]}
                                 >
                                     My News
                                 </NavLink>
@@ -169,7 +173,7 @@ export default function Authenticated({ user, header, children }) {
             </nav>
 
             {header && (
-                <header className=" bg-white shadow">
+                <header className="bg-base-100 shadow">
                     <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {header}
                     </div>

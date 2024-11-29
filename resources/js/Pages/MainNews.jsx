@@ -21,7 +21,7 @@ export default function MainNews(props) {
         <Authenticated
             user={props.auth.user}
             header={
-                <h2 className="font-semibold text-xl text-gray-800 leading-tight">
+                <h2 className="font-semibold text-xl text-white leading-tight">
                     My News
                 </h2>
             }
@@ -52,7 +52,7 @@ export default function MainNews(props) {
                     </div>
                 )}
                 <div className="max-w-screen-xl mx-auto sm:px-6 lg:px-8">
-                    <div className="p-6 mt-5 bg-white text-slate-900 shadow-sm sm:rounded-lg  md:mx-5">
+                    <div className="p-6 mt-5 bg-base-100 text-white shadow-sm sm:rounded-lg  md:mx-5">
                         <div className="flex">
                             <h5 className="font-bold me-auto text-xl mb-3 mt-1 ms-3">
                                 My News

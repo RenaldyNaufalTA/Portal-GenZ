@@ -3,7 +3,7 @@ const TableNews = ({ myNews }) => {
     return (
         <div className="overflow-x-auto">
             <table className="table">
-                <thead className="text-slate-900">
+                <thead>
                     <tr>
                         <th>No</th>
                         <th>Title</th>

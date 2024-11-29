@@ -25,7 +25,7 @@ export default function CreateNews({ news, auth }) {
         <AuthenticatedLayout
             user={auth.user}
             header={
-                <h2 className="font-semibold text-xl text-gray-800 leading-tight">
+                <h2 className="font-semibold text-xl text-white leading-tight">
                     Edit News
                 </h2>
             }
@@ -34,7 +34,7 @@ export default function CreateNews({ news, auth }) {
 
             <div className="py-12">
                 <div className="max-w-screen-md mx-auto sm:px-6 lg:px-8">
-                    <div className="p-6 bg-white text-black  shadow-sm sm:rounded-lg">
+                    <div className="p-6 bg-base-100 text-white shadow-sm sm:rounded-lg">
                         <div className="container mx-0 min-w-full flex flex-col items-end">
                             <Link
                                 href={route("index-news")}
@@ -45,7 +45,7 @@ export default function CreateNews({ news, auth }) {
                         </div>
                         <label className="form-control w-full">
                             <div className="label">
-                                <span className="label-text font-bold text-base text-slate-900">
+                                <span className="label-text font-bold text-base text-white">
                                     Title
                                 </span>
                             </div>
@@ -54,7 +54,7 @@ export default function CreateNews({ news, auth }) {
                                 value={title}
                                 placeholder="Input Title News"
                                 autoFocus
-                                className="input input-bordered input-info w-full bg-white max-w-full lg:w-full"
+                                className="input input-bordered input-info w-full bg-base-100 max-w-full lg:w-full"
                                 onChange={(title) =>
                                     setTitle(title.target.value)
                                 }
@@ -62,7 +62,7 @@ export default function CreateNews({ news, auth }) {
                         </label>
                         <label className="form-control w-full mt-4">
                             <div className="label">
-                                <span className="label-text font-bold text-base text-slate-900">
+                                <span className="label-text font-bold text-base text-white">
                                     Body
                                 </span>
                             </div>
@@ -70,13 +70,13 @@ export default function CreateNews({ news, auth }) {
                                 type="text"
                                 value={body}
                                 placeholder="Input Body News"
-                                className="input input-bordered input-info w-full bg-white h-32"
+                                className="input input-bordered input-info w-full bg-base-100 h-32"
                                 onChange={(body) => setBody(body.target.value)}
                             ></textarea>
                         </label>
                         <label className="form-control w-full mt-4">
                             <div className="label">
-                                <span className="label-text font-bold text-base text-slate-900">
+                                <span className="label-text font-bold text-base text-white">
                                     Category
                                 </span>
                             </div>
@@ -84,7 +84,7 @@ export default function CreateNews({ news, auth }) {
                                 type="text"
                                 value={category}
                                 placeholder="Input Category News"
-                                className="input input-bordered input-info w-full bg-white"
+                                className="input input-bordered input-info w-full bg-base-100"
                                 onChange={(category) =>
                                     setCategory(category.target.value)
                                 }
@@ -92,7 +92,7 @@ export default function CreateNews({ news, auth }) {
                         </label>
 
                         <button
-                            className="btn text-white mt-6 btn-primary px-4 w-full"
+                            className="btn text-white mt-6 bg-sky-500 hover:bg-sky-200 hover:text-black px-4 w-full"
                             onClick={() => handleSubmit()}
                         >
                             Update
